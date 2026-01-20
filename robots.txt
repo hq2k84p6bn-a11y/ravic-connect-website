@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://ravic-connect-website.vercel.app/sitemap.xml
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: GPTBot
+Allow: /
