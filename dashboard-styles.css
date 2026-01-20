@@ -1,0 +1,254 @@
+:root {
+  --rc-blue: #0052cc;
+  --rc-mint: #00d084;
+  --rc-dark: #0f172a;
+  --rc-text: #1f2933;
+  --rc-muted: #6b7280;
+  --rc-bg: #0b1220;
+  --rc-bg-alt: #020617;
+  --rc-border: #1f2937;
+  --rc-radius-md: 0.9rem;
+  --rc-radius-lg: 1.4rem;
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body.rc-dashboard {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar */
+
+.rc-sidebar {
+  width: 240px;
+  background: linear-gradient(to bottom, #020617, #020617);
+  border-right: 1px solid #111827;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rc-sidebar__logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #e5e7eb;
+}
+
+.rc-sidebar__logo span {
+  color: var(--rc-blue);
+}
+
+.rc-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rc-nav-item {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #9ca3af;
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.rc-nav-item--active,
+.rc-nav-item:hover {
+  color: #e5e7eb;
+  border-color: #1d4ed8;
+  background: radial-gradient(circle at left, rgba(59, 130, 246, 0.35), transparent);
+}
+
+/* Main layout */
+
+.rc-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Topbar */
+
+.rc-topbar {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #111827;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.85));
+  backdrop-filter: blur(10px);
+}
+
+.rc-topbar__title h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #f9fafb;
+}
+
+.rc-topbar__title p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--rc-muted);
+}
+
+.rc-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.rc-icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.rc-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.rc-user__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--rc-mint), var(--rc-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #020617;
+}
+
+.rc-user__info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.rc-user__name {
+  color: #f9fafb;
+}
+
+.rc-user__role {
+  color: #9ca3af;
+}
+
+/* Conteúdo principal */
+
+.rc-main__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards do dashboard */
+
+.rc-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.rc-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rc-card-dash {
+  background: radial-gradient(circle at top, rgba(37, 99, 235, 0.4), rgba(15, 23, 42, 0.98));
+  border-radius: var(--rc-radius-lg);
+  border: 1px solid #1f2937;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+.rc-card-dash h2 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+.rc-card-dash__value {
+  margin: 0.2rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.rc-card-dash__hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Seções do dashboard */
+
+.rc-section-dash {
+  display: none;
+}
+
+.rc-section-dash--active {
+  display: block;
+}
+
+.rc-section-dash h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.rc-section-dash p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Responsivo */
+
+@media (max-width: 900px) {
+  .rc-sidebar {
+    display: none;
+  }
+
+  .rc-main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .rc-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .rc-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}

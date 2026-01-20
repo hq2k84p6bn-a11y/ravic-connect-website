@@ -1,0 +1,193 @@
+:root {
+  --rc-blue: #0052cc;
+  --rc-mint: #00d084;
+  --rc-dark: #0f172a;
+  --rc-text: #1f2933;
+  --rc-muted: #6b7280;
+  --rc-bg: #f9fafb;
+  --rc-border: #e5e7eb;
+  --rc-radius-md: 0.75rem;
+  --rc-radius-lg: 1.25rem;
+  --rc-max-width: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body.rc-docs {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  color: var(--rc-text);
+  background-color: var(--rc-bg);
+  line-height: 1.5;
+}
+
+/* Header */
+
+.rc-docs-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--rc-border);
+}
+
+.rc-docs-container {
+  width: 100%;
+  max-width: var(--rc-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.rc-docs-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+
+.rc-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--rc-blue);
+}
+
+.rc-logo span {
+  color: var(--rc-mint);
+}
+
+.rc-docs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rc-docs-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--rc-muted);
+}
+.rc-docs-nav--active {
+  color: var(--rc-blue);
+  font-weight: 600;
+}
+.rc-docs-nav a:hover {
+  color: var(--rc-blue);
+}
+
+/* Layout principal */
+
+.rc-docs-main {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  max-width: var(--rc-max-width);
+  margin: 1.5rem auto;
+  padding: 0 1.5rem 2rem;
+  gap: 1.5rem;
+}
+
+/* Sidebar */
+
+.rc-docs-sidebar {
+  background-color: #ffffff;
+  border-radius: var(--rc-radius-lg);
+  border: 1px solid var(--rc-border);
+  padding: 1.2rem;
+}
+
+.rc-docs-sidebar h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+
+.rc-docs-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rc-docs-sidebar li {
+  margin-bottom: 0.4rem;
+}
+
+.rc-docs-sidebar a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--rc-muted);
+}
+
+.rc-docs-sidebar a:hover {
+  color: var(--rc-blue);
+}
+
+/* Conteúdo */
+
+.rc-docs-content {
+  background-color: #ffffff;
+  border-radius: var(--rc-radius-lg);
+  border: 1px solid var(--rc-border);
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.rc-docs-content h1 {
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+
+.rc-docs-content h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.4rem;
+}
+
+.rc-docs-content p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: var(--rc-muted);
+}
+
+.rc-docs-content ul,
+.rc-docs-content ol {
+  margin: 0.4rem 0 0.2rem;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--rc-muted);
+}
+
+/* FAQ (details) */
+
+details {
+  border-radius: var(--rc-radius-md);
+  border: 1px solid var(--rc-border);
+  padding: 0.6rem 0.8rem;
+  background-color: #fafafa;
+}
+
+details + details {
+  margin-top: 0.5rem;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--rc-text);
+}
+
+details p {
+  margin-top: 0.4rem;
+}
+
+/* Responsivo */
+
+@media (max-width: 900px) {
+  .rc-docs-main {
+    grid-template-columns: 1fr;
+  }
+}

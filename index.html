@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravic Connect - Conectando talentos e oportunidades</title>
+  <meta name="description" content="Ravic Connect: Plataforma inteligente para conectar profissionais e empresas através do Score Ravic e oportunidades personalizadas." />
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="Ravic Connect" />
+  <meta property="og:description" content="Conectando talentos e oportunidades com tecnologia e dados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ravicconnect.com" />
+  <meta property="og:image" content="https://ravicconnect.com/og-image.png" />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="rc-header">
+    <div class="rc-container rc-header__content">
+      <div class="rc-logo">Ravic<span>Connect</span></div>
+      <nav class="rc-nav" aria-label="Navegação principal">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#score-ravic">Score Ravic</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="rc-btn rc-btn--outline" type="button">Entrar</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="rc-hero" aria-labelledby="hero-title">
+      <div class="rc-container rc-hero__content">
+        <div class="rc-hero__text">
+          <h1 id="hero-title">Conecte talentos e oportunidades com inteligência de dados</h1>
+          <p>Use o Score Ravic para encontrar o melhor match entre profissionais e empresas em poucos cliques.</p>
+          <div class="rc-hero__actions">
+            <a class="rc-btn" href="#planos">Começar agora</a>
+            <button class="rc-btn rc-btn--ghost" type="button">Ver dashboard demo</button>
+          </div>
+          <p class="rc-hero__note">Sem cartão de crédito. Teste gratuito.</p>
+        </div>
+        <div class="rc-hero__mockup" aria-hidden="true">
+          <!-- Aqui depois podemos simular um card do dashboard -->
+          <div class="rc-hero__card">
+            <h2>Score Ravic</h2>
+            <p>Profissional: 87/100</p>
+            <p>Compatibilidade com vaga: 93%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidades (6 cards) -->
+    <section id="funcionalidades" class="rc-section">
+      <div class="rc-container">
+        <header class="rc-section__header">
+          <h2>Funcionalidades principais</h2>
+          <p>Recursos projetados para recrutadores, RH e profissionais em busca da melhor oportunidade.</p>
+        </header>
+        <div class="rc-grid rc-grid--3">
+          <article class="rc-card">
+            <h3>Match inteligente</h3>
+            <p>Algoritmo que cruza perfil profissional, competências e requisitos da vaga.</p>
+          </article>
+          <article class="rc-card">
+            <h3>Score Ravic</h3>
+            <p>Métrica transparente que avalia aderência, experiência e soft skills.</p>
+          </article>
+          <article class="rc-card">
+            <h3>Dashboard em tempo real</h3>
+            <p>Visão centralizada de vagas, candidatos, métricas e funil de contratação.</p>
+          </article>
+          <article class="rc-card">
+            <h3>Chat integrado</h3>
+            <p>Comunicação direta entre recrutador e candidato dentro da plataforma.</p>
+          </article>
+          <article class="rc-card">
+            <h3>Analytics</h3>
+            <p>Indicadores de performance, SLA de vagas e qualidade das contratações.</p>
+          </article>
+          <article class="rc-card">
+            <h3>Segurança e LGPD</h3>
+            <p>Proteção de dados pessoais e total conformidade com a legislação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Score Ravic -->
+    <section id="score-ravic" class="rc-section rc-section--alt">
+      <div class="rc-container rc-score">
+        <div class="rc-score__text">
+          <h2>Como funciona o Score Ravic</h2>
+          <p>O Score Ravic combina múltiplas variáveis para gerar uma nota única, facilitando decisões de contratação.</p>
+          <ul>
+            <li>Experiência profissional e tempo em cada posição.</li>
+            <li>Competências técnicas e comportamentais.</li>
+            <li>Aderência cultural e expectativas de carreira.</li>
+          </ul>
+        </div>
+        <div class="rc-score__card" aria-label="Exemplo de Score Ravic">
+          <p>Score Ravic: <strong>87</strong></p>
+          <p>Aderência técnica: 92%</p>
+          <p>Fit cultural: 85%</p>
+          <p>Probabilidade de sucesso: 90%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="rc-section">
+      <div class="rc-container">
+        <header class="rc-section__header">
+          <h2>Planos para cada necessidade</h2>
+          <p>Escolha o plano ideal para você ou para o seu time de recrutamento.</p>
+        </header>
+        <div class="rc-grid rc-grid--3 rc-pricing">
+          <article class="rc-card rc-pricing__card">
+            <h3>Starter</h3>
+            <p class="rc-pricing__price">R$ 0/mês</p>
+            <ul>
+              <li>1 usuário</li>
+              <li>Até 5 vagas ativas</li>
+              <li>Acesso básico ao Score Ravic</li>
+            </ul>
+            <button class="rc-btn rc-btn--outline" type="button">Começar grátis</button>
+          </article>
+          <article class="rc-card rc-pricing__card rc-pricing__card--highlight">
+            <h3>Professional</h3>
+            <p class="rc-pricing__price">R$ 149/mês</p>
+            <ul>
+              <li>Até 5 usuários</li>
+              <li>Vagas ilimitadas</li>
+              <li>Analytics avançado e chat</li>
+            </ul>
+            <button class="rc-btn" type="button">Assinar Professional</button>
+          </article>
+          <article class="rc-card rc-pricing__card">
+            <h3>Enterprise</h3>
+            <p class="rc-pricing__price">Sob consulta</p>
+            <ul>
+              <li>Time e unidades ilimitadas</li>
+              <li>Integração com sistemas internos</li>
+              <li>Suporte dedicado e SLA</li>
+            </ul>
+            <button class="rc-btn rc-btn--outline" type="button">Falar com vendas</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final + Contato -->
+    <section id="contato" class="rc-section rc-section--alt">
+      <div class="rc-container rc-cta">
+        <div class="rc-cta__text">
+          <h2>Pronto para transformar seu recrutamento?</h2>
+          <p>Ative sua conta e comece a usar o Ravic Connect em poucos minutos.</p>
+        </div>
+        <form class="rc-cta__form">
+          <label>
+            <span>Email corporativo</span>
+            <input type="email" name="email" required placeholder="voce@empresa.com" />
+          </label>
+          <button class="rc-btn" type="submit">Solicitar acesso</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rc-footer">
+    <div class="rc-container rc-footer__content">
+      <div>
+        <div class="rc-logo">Ravic<span>Connect</span></div>
+        <p>Todos os direitos reservados © 2024 Ravic Connect</p>
+      </div>
+      <div class="rc-footer__links">
+        <a href="docs.html">Documentação</a>
+        <a href="docs.html#lgpd">LGPD</a>
+        <a href="docs.html#suporte">Suporte</a>
+      </div>
+      <div class="rc-footer__contact">
+        <p>Email: support@ravicconnect.com</p>
+        <p>Telefone: +55 (11) 4000-0000</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

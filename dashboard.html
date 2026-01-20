@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravic Connect - Dashboard</title>
+  <link rel="stylesheet" href="dashboard-styles.css" />
+</head>
+<body class="rc-dashboard">
+  <aside class="rc-sidebar">
+    <div class="rc-sidebar__logo">
+      <span>Ravic</span>Connect
+    </div>
+    <nav class="rc-sidebar__nav" aria-label="Navegação do dashboard">
+      <button class="rc-nav-item rc-nav-item--active" data-section="overview">Dashboard</button>
+      <button class="rc-nav-item" data-section="score">Score Ravic</button>
+      <button class="rc-nav-item" data-section="profile">Perfil</button>
+      <button class="rc-nav-item" data-section="opportunities">Oportunidades</button>
+      <button class="rc-nav-item" data-section="chat">Chat</button>
+      <button class="rc-nav-item" data-section="analytics">Analytics</button>
+      <button class="rc-nav-item" data-section="settings">Configurações</button>
+    </nav>
+  </aside>
+
+  <div class="rc-main">
+    <header class="rc-topbar">
+      <div class="rc-topbar__title">
+        <h1>Dashboard</h1>
+        <p>Visão geral da sua conta Ravic Connect.</p>
+      </div>
+      <div class="rc-topbar__actions">
+        <button class="rc-icon-btn" aria-label="Notificações">🔔</button>
+        <div class="rc-user">
+          <div class="rc-user__avatar">RC</div>
+          <div class="rc-user__info">
+            <span class="rc-user__name">Ana Silva</span>
+            <span class="rc-user__role">Recruiter</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="rc-main__content">
+      <!-- Seção Dashboard (overview) -->
+      <section class="rc-section-dash rc-section-dash--active" id="section-overview">
+        <div class="rc-grid rc-grid--3">
+          <article class="rc-card-dash">
+            <h2>Vagas ativas</h2>
+            <p class="rc-card-dash__value">12</p>
+            <p class="rc-card-dash__hint">+3 nesta semana</p>
+          </article>
+          <article class="rc-card-dash">
+            <h2>Candidatos no funil</h2>
+            <p class="rc-card-dash__value">87</p>
+            <p class="rc-card-dash__hint">Taxa de resposta: 76%</p>
+          </article>
+          <article class="rc-card-dash">
+            <h2>Média Score Ravic</h2>
+            <p class="rc-card-dash__value">84</p>
+            <p class="rc-card-dash__hint">Últimos 30 dias</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seções vazias para preencher depois -->
+      <section class="rc-section-dash" id="section-score">
+        <h2>Score Ravic</h2>
+        <p>Aqui você verá detalhes do Score Ravic por candidato e por vaga.</p>
+      </section>
+
+      <section class="rc-section-dash" id="section-profile">
+        <h2>Perfil</h2>
+        <p>Informações do seu perfil profissional e preferências.</p>
+      </section>
+
+      <section class="rc-section-dash" id="section-opportunities">
+        <h2>Oportunidades</h2>
+        <p>Lista de vagas, status e candidatos relacionados.</p>
+      </section>
+
+      <section class="rc-section-dash" id="section-chat">
+        <h2>Chat</h2>
+        <p>Conversas com candidatos e equipes internas.</p>
+      </section>
+
+      <section class="rc-section-dash" id="section-analytics">
+        <h2>Analytics</h2>
+        <p>Métricas e gráficos de performance de recrutamento.</p>
+      </section>
+
+      <section class="rc-section-dash" id="section-settings">
+        <h2>Configurações</h2>
+        <p>Preferências de notificações, privacidade e conta.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard-script.js"></script>
+</body>
+</html>
